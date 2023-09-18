@@ -135,4 +135,129 @@
 // printForecast(data2);
 
 
-// --------- JavaScript in the Browser: DOM and Events -------
+// --------- Data Structures, Modern Operators and Strings -------
+
+// Coding Challenge #1
+// var players1 = [];
+// var players2 = [];
+// var gk = "Neuer";
+// var fieldPlayers = [];
+// var allPlayers = [];
+// var players1Final = [...players1, 'Thiago', 'Coutinho', 'Perisic'];
+
+// --------- Working With Arrays -------
+
+// Coding Challenge #1
+// var dogsJulia = [3, 5, 2, 12, 7];
+// var dogsKate = [4, 1, 15, 8, 3];
+// var checkDogs = (arr) => {
+//     return arr.filter((value, idx) => {
+//         if (idx === 0 || idx === arr.length - 1) {
+//             return false;
+//         }
+//         return value;
+//     })
+// }
+// var bothDogs = [];
+// bothDogs.push(...checkDogs(dogsJulia));
+// bothDogs.push(...checkDogs(dogsKate));
+// console.log(bothDogs);
+// bothDogs.map((value, idx) => {
+//     if (value >= 3) {
+//         console.log(`Dog number ${idx+1} is an adult, and is ${value} years old`);
+//     } else if (value < 3) {
+//         console.log(`Dog number ${idx+1} is still a puppy`);
+//     }
+// })
+
+// Coding Challenge #2 and #3
+// var calcAverageHumanAge = (ages) => {
+//     return ages.map((age, idx) => {
+//         if (age <= 2) {
+//             return 2 * age;
+//         }
+//         if (age > 2) {
+//             return 16 + (age * 4);
+//         }
+//     })
+// }
+// var calcAvg = (ages) => {
+//     var sum = 0;
+//     ages.forEach(el => {
+//         sum += el;
+//     });
+//     return sum / ages.length - 1;
+// }
+// var data1 = [5, 2, 4, 1, 15, 8, 3];
+// var data2 = [16, 6, 10, 5, 6, 1, 4];
+// var humanAges1 = calcAverageHumanAge(data1);
+// var humanAges2 = calcAverageHumanAge(data2);
+// console.log(`Human age 1: ${humanAges1} --- Average age: ${calcAvg(humanAges1)}`);
+// console.log(`Human age 1: ${humanAges2} --- Average age: ${calcAvg(humanAges2)}`);
+
+// Coding Challenge #4
+// let dogs = [{ weight: 22, curFood: 250, owners: ["Alice", "Bob"] },
+//     { weight: 8, curFood: 200, owners: ["Matilda"] },
+//     { weight: 13, curFood: 275, owners: ["Sarah", "John"] },
+//     { weight: 32, curFood: 340, owners: ["Michael"] },
+// ];
+// dogs = dogs.map(dog => {
+//     var recommendedFood = dog.weight ** 0.75 * 28;
+//     return {...dog, recommendedFood };
+// })
+// var ownersEatTooMuch = [];
+// var ownersEatTooLittle = [];
+// console.log(dogs);
+
+// ------------- Object Oriented Programming (OOP) ----------
+// Coding Challenge #1
+// class Car {
+//     constructor(make, speed) {
+//         this.make = make;
+//         this.speed = speed;
+//     }
+
+//     accelerate() {
+//         this.speed += 10;
+//         console.log("New speed: ", this.speed);
+//     }
+//     brake() {
+//         this.speed -= 5;
+//         console.log("New speed: ", this.speed);
+//     }
+// }
+// var car1 = new Car("BMW", 120);
+// var car2 = new Car("Mercedes", 95);
+// car1.accelerate();
+// car1.brake();
+// car2.accelerate();
+// car2.brake();
+
+// Coding Challenge #2
+// class CarCl {
+//     constructor(make, speed) {
+//         this.make = make;
+//         this.speed = speed;
+//     }
+
+//     accelerate() {
+//         this.speed += 10;
+//         console.log("New speed: ", this.speed);
+//     }
+//     brake() {
+//         this.speed -= 5;
+//         console.log("New speed: ", this.speed);
+//     }
+//     get speedUS() {
+//         return this.speed / 1.6;
+//     }
+//     set speedUS(speed) {
+//         this.speed = speed * 1.6;
+//     }
+// }
+// var newCar = new CarCl("Ford", 120);
+// newCar.accelerate();
+// newCar.brake();
+// console.log(newCar.speedUS);
+// newCar.speedUS = 100;
+// console.log(newCar.speedUS);
